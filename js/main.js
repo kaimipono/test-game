@@ -148,11 +148,14 @@ class Game {
 
     }
 
-}
+}    // Конец объявления класса Game
 
-// const game = new Game(2, 3);    
+// const game = new Game(2, 3);            // создание экземпляра игры со статическими размерами поля
 // game.init();                                
 
+
+// запрашиваем данные (размеры игрового поля) с указанного сервера и запускаем игру с полученными данными
+ 
 const xhr = new XMLHttpRequest();                             // создаем запрос 
 xhr.open('GET', 'https://kde.link/test/get_field_size.php');  // открываем соединение
 
