@@ -10,9 +10,11 @@
 
 body {
     display: flex;
+    padding: 3rem 4rem;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
+    background-color: #8fbac2;
 }
 
 #app {
