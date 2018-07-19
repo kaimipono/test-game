@@ -9,6 +9,8 @@ class Game {
         this.app = document.getElementById('app');    // ссылка на игровое поле
     }
 
+    // Метод, инициализирующий игру
+
     init() {
         this.showGameField();                         // отображаем игровое поле
         this.playGame();                              // запускаем игровой процесс
@@ -23,7 +25,7 @@ class Game {
         // Заполняем массив путями дублирующихся изображений
 
         let imageSources = [];
-        let len = (this.width * this.height) / 2;
+        let len = (this.width * this.height) / 2;    
         for (let i = 0; i < len; i++) {
             let path = `https://kde.link/test/${i % 10}.png`;
             imageSources.push(path, path);
@@ -148,9 +150,8 @@ class Game {
 
 }
 
-
-
-
+// const game = new Game(2, 3);    
+// game.init();                                
 
 const xhr = new XMLHttpRequest();                             // создаем запрос 
 xhr.open('GET', 'https://kde.link/test/get_field_size.php');  // открываем соединение
@@ -174,6 +175,10 @@ xhr.onreadystatechange = () => {                              // вешаем о
 }
 
 xhr.send(null);             // отправляем запрос
+
+
+
+
 
 
 
