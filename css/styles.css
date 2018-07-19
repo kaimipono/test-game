@@ -1,0 +1,58 @@
+/* Resets */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#app {
+    width: auto;
+    height: auto;
+    border: 2px;
+    border-collapse: collapse;
+}
+
+.cell {
+    width: 6.125rem;
+    height: 6.125rem;
+    position: relative;
+    border: 2px solid #000;
+}
+
+.cell .overlay {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(60, 66, 88, 1);
+}
+
+.cell img {
+    max-width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.cell.active .overlay {
+    opacity: 0;
+}
+
+.cell.complete .overlay {
+    opacity: .6;
+}
